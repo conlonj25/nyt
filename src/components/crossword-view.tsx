@@ -26,7 +26,6 @@ const CrosswordView = ({ cols, rows, grid }: CrosswordViewProps) => {
 
 	return (
 		<>
-			<h1>Crossword View</h1>
 			<table className="border">{tableElements}</table>
 		</>
 	);
