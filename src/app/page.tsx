@@ -21,23 +21,19 @@ export default async function Home() {
 	const data = (await getData()) as GithubResponse;
 
 	return (
-		<main className="flex flex-col items-center justify-between p-24">
-			<div className="flex flex-row">
-				<CrosswordView
-					cols={data.size.cols}
-					rows={data.size.rows}
-					grid={data.grid}
-				/>
-				<div className="flex flex-col gap-2">
-					<h1>Clues Across</h1>
-					<div>
-						{data.clues.across.map((el, i) => {
-							return `${el}                           `;
-						})}
-					</div>
-					<h1>Clues Down</h1>
-					<div>{data.clues.across}</div>
-				</div>
+		<main className="flex flex-col items-center justify-between gap-5 p-24">
+			<CrosswordView
+				cols={data.size.cols}
+				rows={data.size.rows}
+				grid={data.grid}
+			/>
+			<div className="p-5 rounded-md bg-emerald-600">
+				<div className="text-2xl">Clues Across</div>
+				<div className="text-sm">{data.clues.across}</div>
+			</div>
+			<div className="p-5 rounded-md bg-emerald-600">
+				<div className="text-2xl">Clues Down</div>
+				<div className="text-sm">{data.clues.across}</div>
 			</div>
 		</main>
 	);
