@@ -26,6 +26,7 @@ export default async function Home() {
 				cols={data.size.cols}
 				rows={data.size.rows}
 				grid={data.grid}
+				gridnums={data.gridnums}
 			/>
 			<div className="p-5 rounded-md bg-emerald-600">
 				<div className="text-2xl">Clues Across</div>
