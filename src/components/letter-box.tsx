@@ -10,7 +10,15 @@ const LetterBox = ({ letter }: LetterBoxProps) => {
 		<div
 			className={`w-10 h-10 flex items-center justify-center border ${blackout}`}
 		>
-			{letter}
+			{!blackout && (
+				<input
+					className="border-none text-center focus:outline-none"
+					type="text"
+					value={letter}
+					size={1}
+					maxLength={1}
+				></input>
+			)}
 		</div>
 	);
 };
