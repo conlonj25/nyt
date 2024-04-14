@@ -20,9 +20,11 @@ const CrosswordView = ({ cols, rows, grid, gridnums }: CrosswordViewProps) => {
 		/>
 	));
 
+	const gridColsClassName = `grid grid-cols-[repeat(${cols},_minmax(0,_1fr))]`;
+
 	return (
 		<>
-			<div className="grid grid-cols-12">{tableElements}</div>
+			<div className={gridColsClassName}>{tableElements}</div>
 		</>
 	);
 };
